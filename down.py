@@ -16,5 +16,10 @@ for a in links:
 	nurl = url + a.attrib['href']
 	data = get_page(nurl)
 	print "downloading: %s to %s" % (data[1], data[0])
-	urllib.urlretrieve(data[1], data[0])
+	res = urllib2.urlopen(data[1])
+	fh = open(data[0], "w")
+	fh.write(res.read())
+	fh.close();
+	#urllib2.urlretrieve(data[1], data[0])
+
 
