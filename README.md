@@ -8,7 +8,6 @@ install the dependencies
 
 ```
 $ sudo easy_install lxml
-$ sudo easy_install requests
 ```
 
 ## download all the things
